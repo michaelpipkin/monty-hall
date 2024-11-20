@@ -1,5 +1,5 @@
 .container {
-  max-width: 400px;
+  max-width: 420px;
   display: grid;
   margin: 16px auto;
   font-family: Roboto, sans-serif;
@@ -7,7 +7,12 @@
 
 .title {
   display: grid;
-  justify-items: center;
+  white-space: nowrap;
+  h3 {
+    display: grid;
+    justify-self: center;
+    margin-bottom: 0;
+  }
 }
 
 .inputs {
@@ -24,7 +29,6 @@
 
 .stats {
   display: grid;
-  justify-items: start;
   margin-bottom: 16px;
 }
 
@@ -32,6 +36,15 @@
   max-height: 600px;
   overflow: auto;
   display: grid;
-  justify-items: start;
   font-size: 0.85em;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
+
+  .results {
+    font-size: 0.8em;
+  }
 }

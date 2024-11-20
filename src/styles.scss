@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrollbar if content is too wide */
+  }
+}

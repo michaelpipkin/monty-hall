@@ -1,6 +1,6 @@
 <div class="container">
   <div class="title">
-    <h2>Monty Hall Problem Demonstration</h2>
+    <h3 style="margin-bottom: 0">Monty Hall Problem Demonstration</h3>
   </div>
   <div>
     <p>
@@ -53,7 +53,7 @@
   </div>
   <div class="stats">
     <mat-label
-      >Expected approximate win % by changing doors:
+      >Expected approx win % by changing doors:
       {{
         ((doorCount() - 1) / doorCount()) * 100 | number : "1.0-0"
       }}%</mat-label
@@ -68,7 +68,8 @@
       }}%)</mat-label
     >
     <mat-label
-      >Rounds won by keeping door: {{ keepWinCount() | number : "1.0-0" }} ({{
+      >Rounds won by keeping first choice:
+      {{ keepWinCount() | number : "1.0-0" }} ({{
         (keepWinCount() / roundsPlayed()) * 100 | number : "1.2-2"
       }}%)</mat-label
     >

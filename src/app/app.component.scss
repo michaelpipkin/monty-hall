@@ -1,8 +1,7 @@
 .container {
-  max-width: 500px;
+  max-width: 400px;
   display: grid;
   margin: 16px auto;
-  padding: 16px;
   font-family: Roboto, sans-serif;
 }
 
@@ -34,4 +33,5 @@
   overflow: auto;
   display: grid;
   justify-items: start;
+  font-size: 0.85em;
 }

@@ -1,14 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component, model, signal, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {
-  MatButton,
-  MatButtonModule,
-  MatIconButton,
-} from '@angular/material/button';
+  ChangeDetectorRef,
+  Component,
+  inject,
+  model,
+  signal,
+  viewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -19,13 +21,14 @@ import {
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatIconModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'Monty Hall Demonstration';
+
+  cdRef = inject(ChangeDetectorRef);
 
   doorCount = model<number>(3);
   roundCount = model<number>(1000);
@@ -61,27 +64,33 @@ export class AppComponent {
     this.changeWinCount.set(0);
     this.keepWinCount.set(0);
     this.results.set([]);
-    const doorCount = this.doorCount();
-    for (let i = 0; i < this.roundCount(); i++) {
-      const winningDoor = Math.floor(Math.random() * doorCount) + 1;
-      const firstChoice = Math.floor(Math.random() * doorCount) + 1;
+    // Trigger change detection to update the DOM
+    this.cdRef.detectChanges();
 
-      if (firstChoice === winningDoor) {
-        this.keepWinCount.set(this.keepWinCount() + 1);
-        this.results.set([
-          ...this.results(),
-          `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Keeping the door wins`,
-        ]);
-      } else {
-        this.changeWinCount.set(this.changeWinCount() + 1);
-        this.results.set([
-          ...this.results(),
-          `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Changing the door wins`,
-        ]);
+    // Use setTimeout to delay the start of the for loop
+    setTimeout(() => {
+      const doorCount = this.doorCount();
+      for (let i = 0; i < this.roundCount(); i++) {
+        const winningDoor = Math.floor(Math.random() * doorCount) + 1;
+        const firstChoice = Math.floor(Math.random() * doorCount) + 1;
+
+        if (firstChoice === winningDoor) {
+          this.keepWinCount.set(this.keepWinCount() + 1);
+          this.results.set([
+            ...this.results(),
+            `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Staying wins`,
+          ]);
+        } else {
+          this.changeWinCount.set(this.changeWinCount() + 1);
+          this.results.set([
+            ...this.results(),
+            `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Changing wins`,
+          ]);
+        }
+        this.roundsPlayed.set(this.roundsPlayed() + 1);
       }
-      this.roundsPlayed.set(this.roundsPlayed() + 1);
-    }
 
-    this.startButton().disabled = false;
+      this.startButton().disabled = false;
+    }, 0);
   }
 }

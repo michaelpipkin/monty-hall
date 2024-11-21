@@ -31,7 +31,7 @@ export class AppComponent {
   cdRef = inject(ChangeDetectorRef);
 
   doorCount = model<number>(3);
-  roundCount = model<number>(1000);
+  roundCount = model<number>(10000);
   results = model<string[]>([]);
 
   roundsPlayed = signal<number>(0);

@@ -13,17 +13,16 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatFormFieldModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatFormFieldModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Monty Hall Demonstration';

@@ -43,6 +43,7 @@
   </div>
   <div class="start-button">
     <button
+      [class.hidden]="gameInProgress()"
       mat-raised-button
       color="primary"
       #startButton
@@ -55,28 +56,25 @@
     <mat-label
       >Expected approx win % by changing doors:
       {{
-        ((doorCount() - 1) / doorCount()) * 100 | number : "1.0-0"
+        ((doorCount() - 1) / doorCount()) * 100 | number: "1.0-0"
       }}%</mat-label
     >
+    <mat-label>Rounds played: {{ roundsPlayed() | number: "1.0-0" }}</mat-label>
     <mat-label
-      >Rounds played: {{ roundsPlayed() | number : "1.0-0" }}</mat-label
-    >
-    <mat-label
-      >Rounds won by changing door:
-      {{ changeWinCount() | number : "1.0-0" }} ({{
-        (changeWinCount() / roundsPlayed()) * 100 | number : "1.2-2"
+      >Rounds won by changing door: {{ changeWinCount() | number: "1.0-0" }} ({{
+        (changeWinCount() / roundsPlayed()) * 100 | number: "1.2-2"
       }}%)</mat-label
     >
     <mat-label
       >Rounds won by keeping first choice:
-      {{ keepWinCount() | number : "1.0-0" }} ({{
-        (keepWinCount() / roundsPlayed()) * 100 | number : "1.2-2"
+      {{ keepWinCount() | number: "1.0-0" }} ({{
+        (keepWinCount() / roundsPlayed()) * 100 | number: "1.2-2"
       }}%)</mat-label
     >
   </div>
   <div class="results">
     @for (result of results(); let i = $index; track i) {
-    <mat-label>{{ result }}</mat-label>
+      <mat-label>{{ result }}</mat-label>
     }
   </div>
 </div>

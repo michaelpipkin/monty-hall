@@ -63,7 +63,7 @@ export class AppComponent {
 
     const doorCount = this.doorCount();
     const roundCount = this.roundCount();
-    const chunkSize = 1000;
+    const chunkSize = this.roundCount() / 20;
 
     for (let i = 0; i < roundCount; i++) {
       const winningDoor = Math.floor(Math.random() * doorCount) + 1;

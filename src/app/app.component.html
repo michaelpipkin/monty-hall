@@ -16,7 +16,7 @@
       The expected win percentage by changing doors is always (number of doors -
       1) / (number of doors). Probabilities are best demonstrated over a large
       number of iterations, so it is recommended to run the simulation for at
-      least 1,000 rounds.
+      least 10,000 rounds.
     </p>
   </div>
   <div class="inputs">
@@ -72,9 +72,7 @@
       }}%)</mat-label
     >
   </div>
-  <div class="results">
-    @for (result of results(); let i = $index; track i) {
-      <mat-label>{{ result }}</mat-label>
-    }
-  </div>
+  <cdk-virtual-scroll-viewport class="results" itemSize="20">
+    <mat-label *cdkVirtualFor="let result of results()">{{ result }}</mat-label>
+  </cdk-virtual-scroll-viewport>
 </div>

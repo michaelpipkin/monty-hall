@@ -1,3 +1,4 @@
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
 import { Component, model, signal, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
   standalone: true,
   imports: [
     CommonModule,
+    ScrollingModule,
     MatInputModule,
     FormsModule,
     MatButtonModule,
@@ -63,32 +65,44 @@ export class AppComponent {
 
     const doorCount = this.doorCount();
     const roundCount = this.roundCount();
-    const chunkSize = this.roundCount() / 20;
+    const chunkSize = Math.max(1, Math.floor(roundCount / 20));
+
+    // Use local variables to avoid O(n²) array spreading and repeated signal updates
+    const localResults: string[] = [];
+    let localKeepWins = 0;
+    let localChangeWins = 0;
 
     for (let i = 0; i < roundCount; i++) {
       const winningDoor = Math.floor(Math.random() * doorCount) + 1;
       const firstChoice = Math.floor(Math.random() * doorCount) + 1;
 
       if (firstChoice === winningDoor) {
-        this.keepWinCount.set(this.keepWinCount() + 1);
-        this.results.set([
-          ...this.results(),
+        localKeepWins++;
+        localResults.push(
           `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Staying wins`,
-        ]);
+        );
       } else {
-        this.changeWinCount.set(this.changeWinCount() + 1);
-        this.results.set([
-          ...this.results(),
+        localChangeWins++;
+        localResults.push(
           `Player chooses door ${firstChoice}; Winning door: ${winningDoor}; Changing wins`,
-        ]);
+        );
       }
-      this.roundsPlayed.set(this.roundsPlayed() + 1);
 
-      // Yield to the browser every chunk to keep UI responsive
+      // Update signals only at chunk boundaries to keep UI responsive
       if ((i + 1) % chunkSize === 0) {
+        this.roundsPlayed.set(i + 1);
+        this.keepWinCount.set(localKeepWins);
+        this.changeWinCount.set(localChangeWins);
+        this.results.set([...localResults]);
         await new Promise((resolve) => requestAnimationFrame(resolve));
       }
     }
+
+    // Final update with all results
+    this.roundsPlayed.set(roundCount);
+    this.keepWinCount.set(localKeepWins);
+    this.changeWinCount.set(localChangeWins);
+    this.results.set(localResults);
 
     this.gameInProgress.set(false);
   }

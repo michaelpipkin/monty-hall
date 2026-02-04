@@ -37,10 +37,14 @@
 }
 
 .results {
-  max-height: 600px;
-  overflow: auto;
-  display: grid;
+  height: 600px;
   font-size: 0.85em;
+
+  mat-label {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -49,6 +53,6 @@
   }
 
   .results {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 }

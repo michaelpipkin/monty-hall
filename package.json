@@ -35,7 +35,7 @@
   "pnpm": {
     "overrides": {
       "@isaacs/brace-expansion": ">=5.0.1",
-      "@modelcontextprotocol/sdk": ">=1.25.2",
+      "@modelcontextprotocol/sdk": ">=1.26.0",
       "body-parser": ">=2.2.1",
       "gh-pages": "^6.3.0",
       "glob": ">11.1.0",

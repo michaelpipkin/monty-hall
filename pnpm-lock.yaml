@@ -5,18 +5,18 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@angular/common': '>=>=21.2.17 <23'
-  '@angular/compiler': '>=>=21.2.17 <23'
-  '@angular/core': '>=>=21.2.17 <23'
-  esbuild: '>=>=0.28.1 <1'
-  fast-uri: '>=>=3.1.2 <4'
-  hono: '>=>=4.12.25 <5'
-  ip-address: '>=>=10.1.1 <11'
-  piscina: '>=>=5.2.0 <6'
-  qs: '>=>=6.15.2 <7'
-  tar: '>=>=7.5.16 <8'
-  undici: '>=>=7.28.0 <7'
-  vite: '>=>=7.3.5 <8'
+  '@angular/common': '>=21.2.17 <23'
+  '@angular/core': '>=21.2.17 <23'
+  '@babel/core': '>=7.29.6 <8'
+  esbuild: '>=0.28.1 <1'
+  fast-uri: '>=3.1.2 <4'
+  hono: '>=4.12.25 <5'
+  ip-address: '>=10.1.1 <11'
+  piscina: '>=5.2.0 <6'
+  qs: '>=6.15.2 <7'
+  tar: '>=7.5.16 <8'
+  undici: '>=7.28.0 <8'
+  vite: '>=7.3.5 <8'
 
 importers:
 
@@ -69,8 +69,8 @@ importers:
         specifier: ^3.1.0
         version: 3.1.0(@angular/cli@22.0.3(chokidar@5.0.0))(chokidar@5.0.0)
       dependabot-agent:
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.1.2
+        version: 0.1.2
       gh-pages:
         specifier: ^6.3.0
         version: 6.3.0
@@ -163,7 +163,7 @@ packages:
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     deprecated: '@angular/animations is deprecated. Use `animate.enter` and `animate.leave` instead. For more information see: https://v22.angular.dev/guide/animations.'
     peerDependencies:
-      '@angular/core': 22.0.2
+      '@angular/core': '>=21.2.17 <23'
 
   '@angular/build@22.0.3':
     resolution: {integrity: sha512-pwFDRCp+r8JK+fCtScPldizcS75wSpn3u/4goDf2FRa4Y9wzTvq6T0XpFHqdpgq6HcIlIZWwAqqW6XqEM9/pKQ==}
@@ -171,7 +171,7 @@ packages:
     peerDependencies:
       '@angular/compiler': ^22.0.0
       '@angular/compiler-cli': ^22.0.0
-      '@angular/core': ^22.0.0
+      '@angular/core': '>=21.2.17 <23'
       '@angular/localize': ^22.0.0
       '@angular/platform-browser': ^22.0.0
       '@angular/platform-server': ^22.0.0
@@ -217,8 +217,8 @@ packages:
   '@angular/cdk@22.0.2':
     resolution: {integrity: sha512-3AOyLNIpvXkxbiCeUc4R5ubwCBpY83ZPe2I6Q/cTUW53SnFapEBNYZ2spSY+jPVY4IVPnQN1Tvjlzq6R9K4M3w==}
     peerDependencies:
-      '@angular/common': ^22.0.0 || ^23.0.0
-      '@angular/core': ^22.0.0 || ^23.0.0
+      '@angular/common': '>=21.2.17 <23'
+      '@angular/core': '>=21.2.17 <23'
       '@angular/platform-browser': ^22.0.0 || ^23.0.0
       rxjs: ^6.5.3 || ^7.4.0
 
@@ -231,7 +231,7 @@ packages:
     resolution: {integrity: sha512-XSkHYRwrM54v4GZ+fg9KU1KbSIE/iQF33VXKo5zqVNKO11MnAbJ59qzyqX/5EzSeogHyBoHApprFKACsCAKm/Q==}
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     peerDependencies:
-      '@angular/core': 22.0.2
+      '@angular/core': '>=21.2.17 <23'
       rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/compiler-cli@22.0.2':
@@ -266,8 +266,8 @@ packages:
     resolution: {integrity: sha512-k2WhkE8Of8/JRYEojSgfygiXbP6I7f/yZ/jgJzFGRC1FlF5w5erQMFx8KPg1J5CRE8kYPzW8rM4tSVCq7AaDUg==}
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     peerDependencies:
-      '@angular/common': 22.0.2
-      '@angular/core': 22.0.2
+      '@angular/common': '>=21.2.17 <23'
+      '@angular/core': '>=21.2.17 <23'
       '@angular/platform-browser': 22.0.2
       rxjs: ^6.5.3 || ^7.4.0
 
@@ -275,8 +275,8 @@ packages:
     resolution: {integrity: sha512-a2sp9ipozR4THqu5A3ff3VXBpbQHpfTmH+Oqb0+RD47fJ+/kvyBUZQ5JK2Yh6eUXVceAOW4s+sL0ev8tS1EfuQ==}
     peerDependencies:
       '@angular/cdk': 22.0.2
-      '@angular/common': ^22.0.0 || ^23.0.0
-      '@angular/core': ^22.0.0 || ^23.0.0
+      '@angular/common': '>=21.2.17 <23'
+      '@angular/core': '>=21.2.17 <23'
       '@angular/forms': ^22.0.0 || ^23.0.0
       '@angular/platform-browser': ^22.0.0 || ^23.0.0
       rxjs: ^6.5.3 || ^7.4.0
@@ -286,9 +286,9 @@ packages:
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     deprecated: '@angular/platform-browser-dynamic is deprecated. Use `@angular/platform-browser` instead.'
     peerDependencies:
-      '@angular/common': 22.0.2
+      '@angular/common': '>=21.2.17 <23'
       '@angular/compiler': 22.0.2
-      '@angular/core': 22.0.2
+      '@angular/core': '>=21.2.17 <23'
       '@angular/platform-browser': 22.0.2
 
   '@angular/platform-browser@22.0.2':
@@ -296,8 +296,8 @@ packages:
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     peerDependencies:
       '@angular/animations': 22.0.2
-      '@angular/common': 22.0.2
-      '@angular/core': 22.0.2
+      '@angular/common': '>=21.2.17 <23'
+      '@angular/core': '>=21.2.17 <23'
     peerDependenciesMeta:
       '@angular/animations':
         optional: true
@@ -306,8 +306,8 @@ packages:
     resolution: {integrity: sha512-uiYlcbOyBliFq1v7O3nMyZtM8scDBurjk4AU2wEPWxSVAXuEjyfnAvowyPzVzGYAEKrsYtcg2TWSsQraqHUbnA==}
     engines: {node: ^22.22.3 || ^24.15.0 || >=26.0.0}
     peerDependencies:
-      '@angular/common': 22.0.2
-      '@angular/core': 22.0.2
+      '@angular/common': '>=21.2.17 <23'
+      '@angular/core': '>=21.2.17 <23'
       '@angular/platform-browser': 22.0.2
       rxjs: ^6.5.3 || ^7.4.0
 
@@ -317,10 +317,6 @@ packages:
 
   '@babel/compat-data@7.29.7':
     resolution: {integrity: sha512-locTkQyKvwIEgBzVrn8693ebc97F2U8ZHjbXwDXJ5Fn2TCpNwTlKcaKLkdHop5c/icOFE7qt7Q9JC5hnKNa6Gg==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/core@7.29.0':
-    resolution: {integrity: sha512-CGOfOJqWjg2qW/Mb6zNsDm+u5vFQ8DxXfbM09z69p5Z6+mE1ikP2jUXw+j42Pf1XTYED2Rni5f95npYeuwMDQA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/core@7.29.7':
@@ -351,7 +347,7 @@ packages:
     resolution: {integrity: sha512-UPUVSyXbOh627KiCIGQSgwWzGeBKLkaJ9PJEdrngIwMSzxLR4jS4+f1f1jb7VzBbg8nFLaYotvVPFCTqdrmTAg==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
-      '@babel/core': ^7.0.0
+      '@babel/core': '>=7.29.6 <8'
 
   '@babel/helper-split-export-declaration@7.24.7':
     resolution: {integrity: sha512-oy5V7pD+UvfkEATUKvIjvIAH/xCzfsFVw7ygW2SI6NClZzquT+mwdTfgfdbUiceh6iQO0CHtCPsyze/MZ2YbAA==}
@@ -557,7 +553,7 @@ packages:
     resolution: {integrity: sha512-GwtvgtXxnWsucXvbQXkRgqksiH2Qed37H9xHZocE5sA3N8O8O8/8FA3uclQXxXVzc9XBZuEOMK7+r02FmSpHtw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
-      hono: ^4
+      hono: '>=4.12.25 <5'
 
   '@inquirer/ansi@2.0.7':
     resolution: {integrity: sha512-3eTuUO1vH2cZm2ZKHeQxnOqlTi9EfZDGgIe3BL3I4u+rJHocr9Fz86M4fjYABPvFnQG/gGK551HqDiIcETwU6Q==}
@@ -1242,7 +1238,7 @@ packages:
     resolution: {integrity: sha512-bdyo8rB3NnQbikdMpHaML9Z1OZPBu6fFOBo+OtxsBlvMJtysWskmBcnbIDhUqgC8tcxNv/a+BcV5U+2nQMm1OQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     peerDependencies:
-      vite: ^6.0.0 || ^7.0.0 || ^8.0.0
+      vite: '>=7.3.5 <8'
 
   '@yarnpkg/lockfile@1.1.0':
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
@@ -1462,8 +1458,8 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
-  dependabot-agent@0.1.1:
-    resolution: {integrity: sha512-vxrM6LSuiwl9LFzm0WQjuzodtEvaxKBJf5Q6KrKSdBq90TeI3/lgzLar7PzdlYis0Vzc0CGxe9WeZll5/HAV7g==}
+  dependabot-agent@0.1.2:
+    resolution: {integrity: sha512-NK/9hEqH6TvF/OgBdfLe+F1pYy4BsQjfUWf9ZnqmpWmigm9HTiynZRKPK7+4BIRF5hRU6N7EgBYgYdt6lwMrvw==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -2408,9 +2404,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici@6.27.0:
-    resolution: {integrity: sha512-YmfV3YnEDzXRC5lZ2jWtWWHKGUm1zIt8AhesR1tens+HTNv+YZlN/dp6G727LOvMJ8xjP9Be7Y2Sdr96LDm+pg==}
-    engines: {node: '>=18.17'}
+  undici@7.28.0:
+    resolution: {integrity: sha512-cRZYrTDwWznlnRiPjggAGxZXanty6M8RV1ff8Wm4LWXBp7/IG8v5DnOm74DtUBp9OONpK75YlPnIjQqX0dBDtA==}
+    engines: {node: '>=20.18.1'}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -2669,7 +2665,7 @@ snapshots:
       '@angular-devkit/architect': 0.2200.3(chokidar@5.0.0)
       '@angular/compiler': 22.0.2
       '@angular/compiler-cli': 22.0.2(@angular/compiler@22.0.2)(typescript@6.0.3)
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.7
       '@babel/helper-annotate-as-pure': 7.27.3
       '@babel/helper-split-export-declaration': 7.24.7
       '@inquirer/confirm': 6.0.12
@@ -2757,7 +2753,7 @@ snapshots:
   '@angular/compiler-cli@22.0.2(@angular/compiler@22.0.2)(typescript@6.0.3)':
     dependencies:
       '@angular/compiler': 22.0.2
-      '@babel/core': 7.29.0
+      '@babel/core': 7.29.7
       '@jridgewell/sourcemap-codec': 1.5.5
       chokidar: 5.0.0
       convert-source-map: 1.9.0
@@ -2833,26 +2829,6 @@ snapshots:
 
   '@babel/compat-data@7.29.7': {}
 
-  '@babel/core@7.29.0':
-    dependencies:
-      '@babel/code-frame': 7.29.7
-      '@babel/generator': 7.29.7
-      '@babel/helper-compilation-targets': 7.29.7
-      '@babel/helper-module-transforms': 7.29.7(@babel/core@7.29.0)
-      '@babel/helpers': 7.29.7
-      '@babel/parser': 7.29.7
-      '@babel/template': 7.29.7
-      '@babel/traverse': 7.29.7
-      '@babel/types': 7.29.7
-      '@jridgewell/remapping': 2.3.5
-      convert-source-map: 2.0.0
-      debug: 4.4.3
-      gensync: 1.0.0-beta.2
-      json5: 2.2.3
-      semver: 6.3.1
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/core@7.29.7':
     dependencies:
       '@babel/code-frame': 7.29.7
@@ -2872,7 +2848,6 @@ snapshots:
       semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@babel/generator@7.29.7':
     dependencies:
@@ -2903,15 +2878,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/helper-module-transforms@7.29.7(@babel/core@7.29.0)':
-    dependencies:
-      '@babel/core': 7.29.0
-      '@babel/helper-module-imports': 7.29.7
-      '@babel/helper-validator-identifier': 7.29.7
-      '@babel/traverse': 7.29.7
-    transitivePeerDependencies:
-      - supports-color
-
   '@babel/helper-module-transforms@7.29.7(@babel/core@7.29.7)':
     dependencies:
       '@babel/core': 7.29.7
@@ -2920,7 +2886,6 @@ snapshots:
       '@babel/traverse': 7.29.7
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   '@babel/helper-split-export-declaration@7.24.7':
     dependencies:
@@ -3794,7 +3759,7 @@ snapshots:
 
   depd@2.0.0: {}
 
-  dependabot-agent@0.1.1:
+  dependabot-agent@0.1.2:
     dependencies:
       js-yaml: 4.2.0
 
@@ -4399,7 +4364,7 @@ snapshots:
       semver: 7.7.4
       tar: 7.5.16
       tinyglobby: 0.2.17
-      undici: 6.27.0
+      undici: 7.28.0
       which: 6.0.1
 
   node-releases@2.0.48: {}
@@ -4873,7 +4838,7 @@ snapshots:
 
   typescript@6.0.3: {}
 
-  undici@6.27.0: {}
+  undici@7.28.0: {}
 
   universalify@2.0.1: {}
 

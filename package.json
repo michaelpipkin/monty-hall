@@ -8,31 +8,31 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng deploy --base-href=/monty-hall/",
-    "reset-packages": "rm -rf node_modules && rm -rf pnpm-lock.yaml && pnpm install"
+    "reset-packages": "rm -rf node_modules && rm -rf pnpm-lock.yaml && pnpm install",
+    "deps:dry-run": "dependabot-agent --dry-run",
+    "deps:fix": "dependabot-agent"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^21.2.9",
-    "@angular/cdk": "^21.2.6",
-    "@angular/common": "^21.2.9",
-    "@angular/compiler": "^21.2.9",
-    "@angular/core": "^21.2.9",
-    "@angular/forms": "^21.2.9",
-    "@angular/material": "^21.2.6",
-    "@angular/platform-browser": "^21.2.9",
-    "@angular/platform-browser-dynamic": "^21.2.9",
-    "@angular/router": "^21.2.9",
+    "@angular/animations": "^22.0.2",
+    "@angular/cdk": "^22.0.2",
+    "@angular/common": "^22.0.2",
+    "@angular/compiler": "^22.0.2",
+    "@angular/core": "^22.0.2",
+    "@angular/forms": "^22.0.2",
+    "@angular/material": "^22.0.2",
+    "@angular/platform-browser": "^22.0.2",
+    "@angular/platform-browser-dynamic": "^22.0.2",
+    "@angular/router": "^22.0.2",
     "tslib": "^2.8.1"
   },
   "devDependencies": {
-    "@angular/build": "^21.2.7",
-    "@angular/cli": "^21.2.7",
-    "@angular/compiler-cli": "^21.2.9",
-    "angular-cli-ghpages": "^3.0.2",
+    "@angular/build": "^22.0.3",
+    "@angular/cli": "^22.0.3",
+    "@angular/compiler-cli": "^22.0.2",
+    "angular-cli-ghpages": "^3.1.0",
+    "dependabot-agent": "^0.1.1",
     "gh-pages": "^6.3.0",
-    "typescript": "~6.0.2"
-  },
-  "pnpm": {
-    "overrides": {}
+    "typescript": "~6.0.3"
   }
 }

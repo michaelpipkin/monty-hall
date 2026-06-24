@@ -1,0 +1,10 @@
+{
+  "repo": "michaelpipkin/monty-hall",
+  "packageManager": "pnpm",
+  "workspaceRoot": ".",
+  "discoverPackages": true,
+  "packages": [],
+  "updateStrategy": "latest",
+  "dryRun": false,
+  "skipUpdate": false
+}

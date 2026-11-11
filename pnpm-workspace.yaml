@@ -6,9 +6,14 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - dependabot-agent
 overrides:
+  '@angular/router': '>=22.2.1 <23'
   '@hono/node-server': '>=2.0.5 <3'
+  '@modelcontextprotocol/server': '>=2.3.0 <3'
   esbuild: '>=0.28.1 <0.29'
-  fast-uri: '>=3.1.6 <4'
+  fast-uri: '>=3.1.9 <4'
   hono: '>=4.12.34 <5'
   ip-address: '>=10.3.1 <11'
   js-yaml: '>=4.3.2 <5'
+  source-map-js: '>=1.2.2 <2'
+  vite: '>=8.3.3 <9'
+  zod: '>=4.6.6 <5'

@@ -10,28 +10,28 @@
     "deploy": "ng deploy",
     "reset-packages": "rm -rf node_modules && rm -rf pnpm-lock.yaml && pnpm install",
     "deps:dry-run": "dependabot-agent --dry-run",
-    "deps:fix": "dependabot-agent"
+    "deps:fix": "dependabot-agent --report ./dependabot-report"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^22.2.0",
-    "@angular/cdk": "^22.2.0",
-    "@angular/common": "^22.2.0",
-    "@angular/compiler": "^22.2.0",
-    "@angular/core": "^22.2.0",
-    "@angular/forms": "^22.2.0",
-    "@angular/material": "^22.2.0",
-    "@angular/platform-browser": "^22.2.0",
-    "@angular/platform-browser-dynamic": "^22.2.0",
-    "@angular/router": "^22.2.0",
-    "tslib": "^2.8.1"
+    "@angular/animations": "^22.2.5",
+    "@angular/cdk": "^22.2.6",
+    "@angular/common": "^22.2.5",
+    "@angular/compiler": "^22.2.5",
+    "@angular/core": "^22.2.5",
+    "@angular/forms": "^22.2.5",
+    "@angular/material": "^22.2.6",
+    "@angular/platform-browser": "^22.2.5",
+    "@angular/platform-browser-dynamic": "^22.2.5",
+    "@angular/router": "^22.2.5",
+    "tslib": "^2.9.1"
   },
   "devDependencies": {
-    "@angular/build": "^22.2.0",
-    "@angular/cli": "^22.2.0",
-    "@angular/compiler-cli": "^22.2.0",
-    "angular-cli-ghpages": "^3.1.0",
-    "dependabot-agent": "^1.2.0",
+    "@angular/build": "^22.2.6",
+    "@angular/cli": "^22.2.6",
+    "@angular/compiler-cli": "^22.2.5",
+    "angular-cli-ghpages": "^3.1.2",
+    "dependabot-agent": "^1.4.0",
     "gh-pages": "^6.3.0",
     "typescript": "~7.0.2"
   }

@@ -9,7 +9,7 @@
     "test": "ng test",
     "deploy": "ng deploy",
     "reset-packages": "rm -rf node_modules && rm -rf pnpm-lock.yaml && pnpm install",
-    "deps:dry-run": "dependabot-agent --dry-run",
+    "deps:dry-run": "dependabot-agent --dry-run --report ./dependabot-report",
     "deps:fix": "dependabot-agent --report ./dependabot-report"
   },
   "private": true,
@@ -31,7 +31,7 @@
     "@angular/cli": "^22.2.6",
     "@angular/compiler-cli": "^22.2.5",
     "angular-cli-ghpages": "^3.1.2",
-    "dependabot-agent": "^1.4.0",
+    "dependabot-agent": "^1.5.0",
     "gh-pages": "^6.3.0",
     "typescript": "~7.0.2"
   }
